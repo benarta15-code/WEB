@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>FrozenBox ❄️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- EFEK SALJU -->
+    <div class="snow snow1">❄</div>
+    <div class="snow snow2">❅</div>
+    <div class="snow snow3">❄</div>
+    <div class="snow snow4">❅</div>
+    <div class="snow snow5">❄</div>
+
+
+    <!-- LOGIN -->
+
+    <div id="loginPage" class="login-page">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                ❄️
+            </div>
+
+            <h1>FrozenBox</h1>
+
+            <p>
+                Simpan kenanganmu dengan aman
+            </p>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+
+            <button onclick="login()">
+                Masuk ❄️
+            </button>
+
+            <p class="login-info">
+                Demo: isi username dan password bebas
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- APLIKASI -->
+
+    <div id="app" class="app hidden">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                ❄️ FrozenBox
+
+            </div>
+
+
+            <nav>
+
+                <button
+                    class="menu active"
+                    onclick="showPage('home')"
+                >
+                    🏠
+                    <span>Beranda</span>
+                </button>
+
+
+                <button
+                    class="menu"
+                    onclick="showPage('files')"
+                >
+                    🖼️
+                    <span>File Saya</span>
+                </button>
+
+
+                <button
+                    class="menu"
+                    onclick="showPage('folders')"
+                >
+                    📁
+                    <span>Folder</span>
+                </button>
+
+
+                <button
+                    class="menu"
+                    onclick="openHidden()"
+                >
+                    🔒
+                    <span>Hidden</span>
+                </button>
+
+
+                <button
+                    class="menu"
+                    onclick="showPage('recycle')"
+                >
+                    🗑️
+                    <span>Recycle Bin</span>
+                </button>
+
+            </nav>
+
+
+            <!-- STORAGE -->
+
+            <div class="storage-mini">
+
+                <p>
+                    💾 Penyimpanan
+                </p>
+
+                <div class="progress">
+
+                    <div
+                        id="sideProgress"
+                        class="progress-bar"
+                    ></div>
+
+                </div>
+
+                <span id="sideStorage">
+
+                    0 MB / 10 GB
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="logout"
+                onclick="logout()"
+            >
+                🚪 Logout
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+
+            <!-- HEADER -->
+
+            <header>
+
+                <div>
+
+                    <h2 id="pageTitle">
+                        Beranda
+                    </h2>
+
+                    <p>
+                        Selamat datang di FrozenBox ❄️
+                    </p>
+
+                </div>
+
+
+                <div class="user-box">
+
+                    👤
+                    <span id="userDisplay">
+                        User
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- BERANDA -->
+
+            <section
+                id="home"
+                class="page active-page"
+            >
+
+                <div class="welcome">
+
+                    <div>
+
+                        <h1>
+                            ❄️ Selamat Datang
+                        </h1>
+
+                        <p>
+                            Simpan foto dan kenanganmu
+                            dalam dunia Frozen.
+                        </p>
+
+                        <button
+                            onclick="openUpload()"
+                        >
+                            ☁️ Upload File
+                        </button>
+
+                    </div>
+
+                    <div class="ice-icon">
+                        🧊
+                    </div>
+
+                </div>
+
+
+
+                <!-- DASHBOARD -->
+
+                <div class="dashboard">
+
+
+                    <div class="info-card">
+
+                        <div class="card-icon">
+                            🖼️
+                        </div>
+
+                        <h3 id="fileCount">
+                            0
+                        </h3>
+
+                        <p>
+                            File Saya
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <div class="card-icon">
+                            📁
+                        </div>
+
+                        <h3 id="folderCount">
+                            0
+                        </h3>
+
+                        <p>
+                            Folder
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <div class="card-icon">
+                            🔒
+                        </div>
+
+                        <h3 id="hiddenCount">
+                            0
+                        </h3>
+
+                        <p>
+                            Hidden
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <div class="card-icon">
+                            💾
+                        </div>
+
+                        <h3 id="usedStorage">
+                            0 MB
+                        </h3>
+
+                        <p>
+                            Storage
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FILE -->
