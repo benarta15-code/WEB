@@ -1,1 +1,1000 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            135deg,
+            #031525,
+            #075985,
+            #38bdf8
+        );
+
+    color: white;
+}
+
+
+/* =====================
+   LOGIN
+===================== */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 380px;
+    max-width: 90%;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    backdrop-filter:
+        blur(20px);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.3);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.3);
+
+    animation: loginIn 0.7s ease;
+}
+
+.login-logo {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    outline: none;
+}
+
+.login-card button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0284c7,
+            #38bdf8
+        );
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    transform: scale(1.03);
+}
+
+.login-info {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+
+/* =====================
+   APP
+===================== */
+
+.hidden {
+    display: none !important;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =====================
+   SIDEBAR
+===================== */
+
+.sidebar {
+    width: 250px;
+
+    min-height: 100vh;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        rgba(0,15,35,0.8);
+
+    backdrop-filter:
+        blur(20px);
+
+    border-right:
+        1px solid
+        rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    text-shadow:
+        0 0 15px white;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu:hover {
+    background:
+        rgba(255,255,255,0.1);
+}
+
+.menu.active {
+    background:
+        linear-gradient(
+            90deg,
+            #0284c7,
+            #38bdf8
+        );
+}
+
+
+/* =====================
+   STORAGE MINI
+===================== */
+
+.storage-mini {
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,0.1);
+}
+
+.storage-mini p {
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 8px;
+
+    background:
+        rgba(255,255,255,0.2);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #38bdf8,
+            white
+        );
+
+    transition: 0.5s;
+}
+
+.storage-mini span {
+    font-size: 12px;
+}
+
+
+/* LOGOUT */
+
+.logout {
+    margin-top: 15px;
+
+    border: none;
+
+    background:
+        rgba(255,255,255,0.1);
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+
+/* =====================
+   MAIN
+===================== */
+
+.main {
+    flex: 1;
+
+    padding: 30px;
+}
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+header p {
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.user-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.1);
+}
+
+
+/* =====================
+   PAGE
+===================== */
+
+.page {
+    display: none;
+}
+
+.active-page {
+    display: block;
+    animation: pageIn 0.5s ease;
+}
+
+
+/* =====================
+   WELCOME
+===================== */
+
+.welcome {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    margin-bottom: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(56,189,248,0.4),
+            rgba(255,255,255,0.1)
+        );
+
+    backdrop-filter:
+        blur(15px);
+}
+
+.welcome h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.welcome button,
+.page-top button {
+    border: none;
+
+    padding: 13px 22px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0284c7,
+            #38bdf8
+        );
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.welcome button:hover,
+.page-top button:hover {
+    transform:
+        translateY(-3px);
+}
+
+.ice-icon {
+    font-size: 80px;
+}
+
+
+/* =====================
+   DASHBOARD
+===================== */
+
+.dashboard {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(170px,1fr)
+        );
+
+    gap: 20px;
+}
+
+.info-card {
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    backdrop-filter:
+        blur(15px);
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform:
+        translateY(-7px);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 28px;
+}
+
+.info-card p {
+    opacity: 0.7;
+}
+
+
+/* =====================
+   PAGE TOP
+===================== */
+
+.page-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================
+   GALLERY
+===================== */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(180px,1fr)
+        );
+
+    gap: 20px;
+}
+
+.photo {
+    height: 220px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    cursor: pointer;
+
+    animation: photoIn 0.4s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo-name {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 12px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.8)
+        );
+
+    font-size: 13px;
+}
+
+
+/* =====================
+   FOLDER
+===================== */
+
+.folder-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(180px,1fr)
+        );
+
+    gap: 20px;
+}
+
+.folder {
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.folder:hover {
+    transform:
+        translateY(-7px);
+}
+
+.folder-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+
+/* =====================
+   EMPTY
+===================== */
+
+.empty {
+    grid-column: 1/-1;
+
+    text-align: center;
+
+    padding: 80px;
+
+    font-size: 45px;
+
+    opacity: 0.7;
+}
+
+.empty p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/* =====================
+   STORAGE
+===================== */
+
+.storage-card {
+    margin-top: 25px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+.big-progress {
+    height: 25px;
+
+    margin: 20px 0;
+
+    background:
+        rgba(255,255,255,0.2);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+}
+
+.big-progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0284c7,
+            #38bdf8,
+            white
+        );
+
+    transition: 0.6s;
+}
+
+.storage-details {
+    margin-top: 30px;
+}
+
+.storage-details div {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 15px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.15);
+}
+
+
+/* =====================
+   MODAL
+===================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 100;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0,0,0,0.9);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 85%;
+    max-height: 70%;
+
+    border-radius: 20px;
+
+    animation: modalIn 0.4s ease;
+}
+
+.close {
+    position: absolute;
+
+    top: 20px;
+    right: 35px;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+.modal-actions {
+    position: absolute;
+
+    bottom: 30px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.modal-actions button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    background: #0284c7;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =====================
+   PIN
+===================== */
+
+.pin-modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 200;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0,0,0,0.8);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.pin-card {
+    width: 350px;
+
+    max-width: 90%;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        #0b3152;
+
+    animation: loginIn 0.4s ease;
+}
+
+.pin-card input {
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 20px 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+.pin-card button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #0284c7;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin-bottom: 10px;
+}
+
+.pin-card .cancel {
+    background:
+        rgba(255,255,255,0.15);
+}
+
+
+/* =====================
+   SALJU
+===================== */
+
+.snow {
+    position: fixed;
+
+    top: -30px;
+
+    font-size: 25px;
+
+    animation:
+        snowFall linear infinite;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+}
+
+.snow1 {
+    left: 10%;
+    animation-duration: 9s;
+}
+
+.snow2 {
+    left: 30%;
+    animation-duration: 12s;
+}
+
+.snow3 {
+    left: 50%;
+    animation-duration: 8s;
+}
+
+.snow4 {
+    left: 70%;
+    animation-duration: 14s;
+}
+
+.snow5 {
+    left: 90%;
+    animation-duration: 10s;
+}
+
+
+/* =====================
+   ANIMATION
+===================== */
+
+@keyframes snowFall {
+
+    from {
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+    }
+
+}
+
+@keyframes loginIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes pageIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+@keyframes photoIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================
+   MOBILE
+===================== */
+
+@media(max-width: 700px) {
+
+    .sidebar {
+        width: 70px;
+        padding: 20px 8px;
+    }
+
+    .logo {
+        font-size: 0;
+    }
+
+    .logo::after {
+        content: "❄️";
+        font-size: 30px;
+    }
+
+    .menu span {
+        display: none;
+    }
+
+    .menu {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .storage-mini {
+        display: none;
+    }
+
+    .main {
+        padding: 20px 12px;
+    }
+
+    .welcome {
+        padding: 25px;
+    }
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+    .ice-icon {
+        display: none;
+    }
+
+    .user-box span {
+        display: none;
+    }
+
+}
